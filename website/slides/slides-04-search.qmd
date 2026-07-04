@@ -23,13 +23,31 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import os
 import sys
+import re
+from rank_bm25 import BM25Okapi
+from sentence_transformers import SentenceTransformer
+from sklearn.metrics.pairwise import cosine_similarity
 plt.rcParams["font.size"] = 16
 DATA_DIR = 'data/' 
 ```
 
-# Keyword and Semantic Search
+## Search is everywhere
 
-## Can computers search like humans? {background-color="#fafabc"}
+Every day we search using
+
+- 🔎 Google
+
+- 🛒 Amazon
+
+- 🎵 Spotify
+
+- 🎬 Netflix
+
+- 🤖 ChatGPT
+
+But how does a computer decide **which result should appear first?**
+
+## Activity {background-color="#fafabc"}
 
 Imagine you're shopping online. 
 
@@ -49,154 +67,231 @@ You search for
 4. Study Desk 
 ::: 
 ::::
+
 Which product should appear first?
-
-#
-
-How does a computer decide which result is the most relevant?
 
 ## Method 1: Keyword Search
 
-The computer looks for the exact words you typed.
-
+Keyword search looks for the **same words** that appear in your query.
 
 :::: {.columns}
-::: {.column width="50%"}
-"<span class="highlight">Headphones</span> for studying"
-::: 
-::: {.column width="50%"}
-**Products**
 
-1. Gaming Headset 🎮
-2. Sony WH-1000XM6 Noise-Cancelling <span class="highlight">Headphones</span> 🎧 
-3. Bluetooth Speaker 🔈
-4. **Study** Desk
-::: 
+::: {.column width="50%"}
+
+Query
+
+> **headphones for studying**
+
+:::
+
+::: {.column width="50%"}
+
+Products
+
+- Gaming Headset
+
+- Sony Noise-Cancelling **Headphones**
+
+- Bluetooth Speaker
+
+- **Study** Desk
+
+:::
+
 ::::
 
-## Activity
+## Activity {background-color="#fafabc"}
 
-Suppose a search engine uses **keyword search**.
-
-You search for:
-
-> **Headphones for studying**
-
-Which of these products would be matched?
+Suppose we use **keyword search**. Which products would be matched?
 
 - Bose QuietComfort Noise-Cancelling Headphones 🎧
+
 - Sony WH-1000XM6 Wireless Headphones 🎧
-- Study Desk 📚
+
+- Desk for Studying 📚
+
 - Headphones Carrying Case 🎒
+
 - Homework Planner 📅
 
+Which ones are actually useful?
 
-# When keyword search struggles
+## When keyword search struggles
 
-Suppose you search
+| You search for... | Product contains... |
+|-------------------|---------------------|
+| sneakers | running shoes |
+| couch | sofa |
+| physician | doctor |
+| puppy | dog |
 
-> sneakers
+The meanings are similar but the words are different.
 
-but the product says
+## Method 2: Semantic Search
 
-> running shoes
+Instead of matching words **semantic search** tries to match **meaning**.
 
-Or you search
+Examples
 
-> couch
+> puppy ≈ dog
 
-but the product says
+> physician ≈ doctor
 
-> sofa
+> couch ≈ sofa
 
-They mean almost the same thing...
+> bicycle ≈ bike
 
-...but they don't share any words.
+## Example 
+```{python}
 
+docs = [
+    "My puppy loves chasing tennis balls.",
+    "My dog enjoys long walks in the park.",
+    "Cats sleep for most of the day.",
+    "The kitten climbed the tree.",
+    "I baked chocolate chip cookies yesterday.",
+    "This recipe makes delicious brownies.",
+    "Vancouver received heavy rainfall today.",
+    "It might rain tomorrow.",
+    "Taylor Swift released a new album.",
+    "I listened to some great music.",
+    "I rode my bicycle to school.",
+    "My bike has a flat tire.",
+    "The physician recommended more exercise.",
+    "The doctor prescribed antibiotics.",
+    "Penguins cannot fly.",
+]
 
-# Method 2: Semantic Search
+def tokenize(text):
+    return re.findall(r"\b\w+\b", text.lower())
 
-Instead of matching words, the computer tries to understand the meaning.
+tokenized_docs = [tokenize(doc) for doc in docs]
+bm25 = BM25Okapi(tokenized_docs)
 
-> "sneakers" $\approx$ "running shoes"
+model = SentenceTransformer("all-MiniLM-L6-v2")
+doc_embeddings = model.encode(docs)
 
-> "couch" $\approx$ "sofa"
+print("Documents: ")
+docs 
+```
 
-Now the computer can find things even when the wording is different.
+## Keyword search vs. semantic search
+```{python}
+def bm25_search(query, top_k=5):
+    tokenized_query = tokenize(query)
+    scores = bm25.get_scores(tokenized_query)
+    ranked_indices = scores.argsort()[::-1][:top_k]
 
+    return [(idx + 1, docs[idx], scores[idx]) for idx in ranked_indices if scores[idx] > 0]
 
-## Activity
+def semantic_search(query, top_k=5):
+    query_embedding = model.encode([query])
+    scores = cosine_similarity(query_embedding, doc_embeddings)[0]
+    ranked_indices = scores.argsort()[::-1][:top_k]
 
-Would semantic search help?
+    return [(idx + 1, docs[idx], scores[idx]) for idx in ranked_indices]
 
-- "rainproof jogging equipment"
-- "chair for back pain"
-- "movie about dinosaurs"
-- "phone with a great camera"
+def compare_search(query, top_k=5):
+    print(f"\nQUERY: {query!r}\n")
 
-Discuss with your neighbour.
+    print("Keyword search results")
+    bm25_results = bm25_search(query, top_k=top_k)
+
+    if bm25_results:
+        for doc_id, doc, score in bm25_results:
+            print(f"{doc_id}. {doc}  (score = {score:.2f})")
+    else:
+        print("No keyword matches.")
+
+    print("\nSemantic search results")
+    semantic_results = semantic_search(query, top_k=top_k)
+
+    for doc_id, doc, score in semantic_results:
+        print(f"{doc_id}. {doc}  (score = {score:.2f})")
+```
+
+```{python}
+#| echo: true
+compare_search("kitten")
+```
+
+## Keyword search vs. semantic search
+```{python}
+#| echo: true
+compare_search("doctor")
+```
+
+## Keyword search vs. semantic search
+```{python}
+#| echo: true
+compare_search("bike")
+```
+
+## Keyword search vs. semantic search
+```{python}
+#| echo: true
+compare_search("storm")
+```
+
+## Keyword search vs. semantic search
+```{python}
+#| echo: true
+compare_search("songs")
+```
 
 ## How can a computer understand meaning?
 
-Modern AI converts words into numbers called **embeddings**.
+- Modern AI converts words into numbers called **embeddings**.
 
-Words with similar meanings end up close together.
+- Words with similar meanings end up close together.
 
-(cat) 🐱
+  - _cat_ 🐱 is close to _kitten_ but far away from _car_
 
-is close to
+- The computer compares these numbers instead of comparing words.
 
-(kitten)
+## Explore embeddings
 
-but far away from
+- [https://projector.tensorflow.org/](https://projector.tensorflow.org/)
 
-(car)
+- [https://word-embeddings.wbkolleg.unibe.ch/](https://word-embeddings.wbkolleg.unibe.ch/)
 
-The computer compares these numbers instead of comparing words.
+## Activity {background-color="#fafabc"}
 
-# Keyword vs Semantic Search
+Which search method would you choose?
 
-| Keyword Search | Semantic Search |
-|----------------|-----------------|
-| Matches words | Matches meaning |
-| Great for names | Great for natural language |
-| Finds exact products | Finds related ideas |
-| Misses synonyms | Understands synonyms |
+1. "WH-1000XM5"
+2. "good headphones for airplanes"
+3. "a beautiful purple dress for parties"
+4. "Macbook Pro M5"
 
+## Hybrid Search
 
-## Which would you use?
+Modern search systems combine keyword search and semantic search. This is called **Hybrid Search**.
 
-Search:
+:::: {.columns}
+::: {.column width="50%"}
 
-> "WH-1000XM5"
+### Keyword search is great for
 
-Best choice?
+- product names
+- model numbers
+- IDs
+::: 
 
-✅ Keyword search
+::: {.column width="50%"}
 
+### Semantic search is great for
 
-Search:
-
-> "good headphones for airplanes"
-
-Best choice?
-
-✅ Semantic search
-
-
-## The best systems use both
-
-Modern search engines and AI assistants combine
-
-- Keyword search
-- Semantic search
-
-This is called **Hybrid Search**.
-
-It gives the best of both worlds.
-
+- descriptions
+- synonyms
+- intent
+- meaning
+:::
+::::
 
 ## Where is this used?
+
+Almost every modern search system uses hybrid search.
 
 - Google Search
 - Amazon
@@ -206,17 +301,12 @@ It gives the best of both worlds.
 - ChatGPT
 - AI assistants
 
-Almost every modern search system combines keyword matching with AI.
-
-
 ## Takeaways
 
-✔ Keyword search looks for matching words.
+- Keyword search looks for matching words.
 
-✔ Semantic search looks for matching meaning.
+- Semantic search looks for matching meaning.
 
-✔ Modern AI systems combine both approaches.
+- Modern AI systems combine both approaches.
 
-The goal isn't just to find the same words.
-
-It's to find the most useful information.
+The goal isn't just to find the same words. It's to find the most useful information.

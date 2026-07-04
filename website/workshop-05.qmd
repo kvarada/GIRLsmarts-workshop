@@ -16,5 +16,4 @@ editor: { render-on-save: true }
 
 - Summary 
 - Thanks 
-- Survey 
 

@@ -37,8 +37,8 @@ website:
         - workshop-01.qmd
         - workshop-02.qmd
         - workshop-03.qmd
-        - workshop-04-break.qmd
-        - workshop-06.qmd
+        - workshop-04.qmd
+        - workshop-05.qmd
 format:
   html:
     theme: [zephyr]

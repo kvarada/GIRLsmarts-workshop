@@ -7,7 +7,7 @@
 .git
 .quarto
 _build*
-
+*.csv
 /.quarto/
 
 **/*.quarto_ipynb

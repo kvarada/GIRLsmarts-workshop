@@ -12,46 +12,16 @@ editor:
   render-on-save: true
 ---
 
-## What did we cover? 
+## Reflect on what we covered
 
-- Introduction to linear models 
-- Introduction to deep learning and transfer learning
+**Discuss the following questions with your neighbour.**
 
-## A bit about our MDS program 
+- **What is AI?** Give one example where you would use AI and one where you would not.
+- **What is a language model?** Why are modern language models so powerful?
+- **Why can searching by meaning work better than searching by exact words?**
 
-- Master of Data Science (MDS) is a 10-month accelerated professional program 
-- 24 1-credit courses in 8 months + 2 months Capstone with industry/academia partners 
-- Unique partnership between CS, Stats, and Linguistics
-- Curriculum designed from scratch 
+## Final takeaway
 
-## Our audience
-
-- Individuals with basic knowledge of programming, statistics, calculus, and linear algebra.
-- Professionals currently working with data, seeking a systematic understanding of data science to effectively solve their data problems 
-- Those looking for a career change, feeling bored, or aiming to upskill
-- Fresh undergrads with research experience or who have completed co-ops or internships
-
-
-## Some possibilities
-
-:::: {.columns}
-
-::: {.column width="50%"}
-- Submit a data science related [Capstone project](https://ubc-mds.github.io/capstone/about/) and work with our students 
-- If you are interested in applying to the program check out our web page: https://ubc-mds.github.io/ 
-:::
-
-::: {.column width="50%"}
-![](img/MDS-V-QR-Code.png)
-:::
-::::
-
-
-## How did we do?  
-
-- That's it! Thank you for attending our workshop.
-- We would greatly appreciate your feedback.
-  - Feedback form: )
-- Your input will also help us advocate for organizing more workshops like this in the future.
-
-![](img/eva-signing-off.png)
+- **AI is not magic.** It learns patterns from data.
+- **AI is a powerful tool but not the right tool for every problem.**
+- The key skill is knowing **when to use AI, when to question it, and when humans need to stay involved.**
