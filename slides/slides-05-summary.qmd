@@ -1,0 +1,27 @@
+---
+title: Summary and conclusion
+
+format:
+    revealjs:
+        html-math-method: plain
+        slide-level: 2
+        theme:
+          - slides.scss
+
+editor:
+  render-on-save: true
+---
+
+## Reflect on what we covered
+
+**Discuss the following questions with your neighbour.**
+
+- **What is AI?** Give one example where you would use AI and one where you would not.
+- **What is a language model?** Why are modern language models so powerful?
+- **Why can searching by meaning work better than searching by exact words?**
+
+## Final takeaway
+
+- **AI is not magic.** It learns patterns from data.
+- **AI is a powerful tool but not the right tool for every problem.**
+- The key skill is knowing **when to use AI, when to question it, and when humans need to stay involved.**
