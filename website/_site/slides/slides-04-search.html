@@ -6,8 +6,8 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.9.38">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.8.27">
 
   <meta name="author" content="Varada Kolhatkar">
   <title>Introduction to AI and LLMs – Keyword and Semantic Search</title>
@@ -17,9 +17,6 @@
   <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
   <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
   <style>
-    /* Default styles provided by pandoc.
-    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
-    */
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
     div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -31,8 +28,74 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-fcfa13269b934339e62dae4531bcab9f.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-c39140e133d18a701d4eb586eb580cc3.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -141,13 +204,20 @@ Varada Kolhatkar
 </div>
 
 </section>
-<section>
-<section id="keyword-and-semantic-search" class="title-slide slide level1 center">
-<h1>Keyword and Semantic Search</h1>
-
+<section id="search-is-everywhere" class="slide level2">
+<h2>Search is everywhere</h2>
+<p>Every day we search using</p>
+<ul>
+<li><p>🔎 Google</p></li>
+<li><p>🛒 Amazon</p></li>
+<li><p>🎵 Spotify</p></li>
+<li><p>🎬 Netflix</p></li>
+<li><p>🤖 ChatGPT</p></li>
+</ul>
+<p>But how does a computer decide <strong>which result should appear first?</strong></p>
 </section>
-<section id="can-computers-search-like-humans" class="slide level2" data-background-color="#fafabc">
-<h2>Can computers search like humans?</h2>
+<section id="activity" class="slide level2" data-background-color="#fafabc">
+<h2>Activity</h2>
 <p>Imagine you’re shopping online.</p>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -163,157 +233,262 @@ Varada Kolhatkar
 </ol>
 </div></div>
 <p>Which product should appear first?</p>
-</section></section>
-<section>
-<section id="section" class="title-slide slide level1 center">
-<h1></h1>
-<p>How does a computer decide which result is the most relevant?</p>
 </section>
 <section id="method-1-keyword-search" class="slide level2">
 <h2>Method 1: Keyword Search</h2>
-<p>The computer looks for the exact words you typed.</p>
+<p>Keyword search looks for the <strong>same words</strong> that appear in your query.</p>
 <div class="columns">
 <div class="column" style="width:50%;">
-<p>“<span class="highlight">Headphones</span> for studying”</p>
+<p>Query</p>
+<blockquote>
+<p><strong>headphones for studying</strong></p>
+</blockquote>
 </div><div class="column" style="width:50%;">
-<p><strong>Products</strong></p>
-<ol type="1">
-<li>Gaming Headset 🎮</li>
-<li>Sony WH-1000XM6 Noise-Cancelling <span class="highlight">Headphones</span> 🎧</li>
-<li>Bluetooth Speaker 🔈</li>
-<li><strong>Study</strong> Desk</li>
-</ol>
+<p>Products</p>
+<ul>
+<li><p>Gaming Headset</p></li>
+<li><p>Sony Noise-Cancelling <strong>Headphones</strong></p></li>
+<li><p>Bluetooth Speaker</p></li>
+<li><p><strong>Study</strong> Desk</p></li>
+</ul>
 </div></div>
 </section>
-<section id="activity" class="slide level2">
+<section id="activity-1" class="slide level2" data-background-color="#fafabc">
 <h2>Activity</h2>
-<p>Suppose a search engine uses <strong>keyword search</strong>.</p>
-<p>You search for:</p>
-<blockquote>
-<p><strong>Headphones for studying</strong></p>
-</blockquote>
-<p>Which of these products would be matched?</p>
+<p>Suppose we use <strong>keyword search</strong>. Which products would be matched?</p>
 <ul>
-<li>Bose QuietComfort Noise-Cancelling Headphones 🎧</li>
-<li>Sony WH-1000XM6 Wireless Headphones 🎧</li>
-<li>Study Desk 📚</li>
-<li>Headphones Carrying Case 🎒</li>
-<li>Homework Planner 📅</li>
+<li><p>Bose QuietComfort Noise-Cancelling Headphones 🎧</p></li>
+<li><p>Sony WH-1000XM6 Wireless Headphones 🎧</p></li>
+<li><p>Desk for Studying 📚</p></li>
+<li><p>Headphones Carrying Case 🎒</p></li>
+<li><p>Homework Planner 📅</p></li>
 </ul>
-</section></section>
-<section id="when-keyword-search-struggles" class="title-slide slide level1 center">
-<h1>When keyword search struggles</h1>
-<p>Suppose you search</p>
-<blockquote>
-<p>sneakers</p>
-</blockquote>
-<p>but the product says</p>
-<blockquote>
-<p>running shoes</p>
-</blockquote>
-<p>Or you search</p>
-<blockquote>
-<p>couch</p>
-</blockquote>
-<p>but the product says</p>
-<blockquote>
-<p>sofa</p>
-</blockquote>
-<p>They mean almost the same thing…</p>
-<p>…but they don’t share any words.</p>
+<p>Which ones are actually useful?</p>
 </section>
-
-<section>
-<section id="method-2-semantic-search" class="title-slide slide level1 center">
-<h1>Method 2: Semantic Search</h1>
-<p>Instead of matching words, the computer tries to understand the meaning.</p>
-<blockquote>
-<p>“sneakers” <span class="math inline">\(\approx\)</span> “running shoes”</p>
-</blockquote>
-<blockquote>
-<p>“couch” <span class="math inline">\(\approx\)</span> “sofa”</p>
-</blockquote>
-<p>Now the computer can find things even when the wording is different.</p>
-</section>
-<section id="activity-1" class="slide level2">
-<h2>Activity</h2>
-<p>Would semantic search help?</p>
-<ul>
-<li>“rainproof jogging equipment”</li>
-<li>“chair for back pain”</li>
-<li>“movie about dinosaurs”</li>
-<li>“phone with a great camera”</li>
-</ul>
-<p>Discuss with your neighbour.</p>
-</section>
-<section id="how-can-a-computer-understand-meaning" class="slide level2">
-<h2>How can a computer understand meaning?</h2>
-<p>Modern AI converts words into numbers called <strong>embeddings</strong>.</p>
-<p>Words with similar meanings end up close together.</p>
-<p>(cat) 🐱</p>
-<p>is close to</p>
-<p>(kitten)</p>
-<p>but far away from</p>
-<p>(car)</p>
-<p>The computer compares these numbers instead of comparing words.</p>
-</section></section>
-<section>
-<section id="keyword-vs-semantic-search" class="title-slide slide level1 center">
-<h1>Keyword vs Semantic Search</h1>
+<section id="when-keyword-search-struggles" class="slide level2">
+<h2>When keyword search struggles</h2>
 <table class="caption-top">
 <thead>
 <tr class="header">
-<th>Keyword Search</th>
-<th>Semantic Search</th>
+<th>You search for…</th>
+<th>Product contains…</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Matches words</td>
-<td>Matches meaning</td>
+<td>sneakers</td>
+<td>running shoes</td>
 </tr>
 <tr class="even">
-<td>Great for names</td>
-<td>Great for natural language</td>
+<td>couch</td>
+<td>sofa</td>
 </tr>
 <tr class="odd">
-<td>Finds exact products</td>
-<td>Finds related ideas</td>
+<td>physician</td>
+<td>doctor</td>
 </tr>
 <tr class="even">
-<td>Misses synonyms</td>
-<td>Understands synonyms</td>
+<td>puppy</td>
+<td>dog</td>
 </tr>
 </tbody>
 </table>
+<p>The meanings are similar but the words are different.</p>
 </section>
-<section id="which-would-you-use" class="slide level2">
-<h2>Which would you use?</h2>
-<p>Search:</p>
+<section id="method-2-semantic-search" class="slide level2">
+<h2>Method 2: Semantic Search</h2>
+<p>Instead of matching words <strong>semantic search</strong> tries to match <strong>meaning</strong>.</p>
+<p>Examples</p>
 <blockquote>
-<p>“WH-1000XM5”</p>
+<p>puppy ≈ dog</p>
 </blockquote>
-<p>Best choice?</p>
-<p>✅ Keyword search</p>
-<p>Search:</p>
 <blockquote>
-<p>“good headphones for airplanes”</p>
+<p>physician ≈ doctor</p>
 </blockquote>
-<p>Best choice?</p>
-<p>✅ Semantic search</p>
+<blockquote>
+<p>couch ≈ sofa</p>
+</blockquote>
+<blockquote>
+<p>bicycle ≈ bike</p>
+</blockquote>
 </section>
-<section id="the-best-systems-use-both" class="slide level2">
-<h2>The best systems use both</h2>
-<p>Modern search engines and AI assistants combine</p>
+<section id="example" class="slide level2">
+<h2>Example</h2>
+<div id="0e661403" class="cell" data-execution_count="2">
+<div class="cell-output cell-output-stdout">
+<pre><code>Documents: </code></pre>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="138">
+<pre><code>['My puppy loves chasing tennis balls.',
+ 'My dog enjoys long walks in the park.',
+ 'Cats sleep for most of the day.',
+ 'The kitten climbed the tree.',
+ 'I baked chocolate chip cookies yesterday.',
+ 'This recipe makes delicious brownies.',
+ 'Vancouver received heavy rainfall today.',
+ 'It might rain tomorrow.',
+ 'Taylor Swift released a new album.',
+ 'I listened to some great music.',
+ 'I rode my bicycle to school.',
+ 'My bike has a flat tire.',
+ 'The physician recommended more exercise.',
+ 'The doctor prescribed antibiotics.',
+ 'Penguins cannot fly.']</code></pre>
+</div>
+</div>
+</section>
+<section id="keyword-search-vs.-semantic-search" class="slide level2">
+<h2>Keyword search vs.&nbsp;semantic search</h2>
+<div id="573a9ffe" class="cell" data-execution_count="4">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a>compare_search(<span class="st">"kitten"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+QUERY: 'kitten'
+
+Keyword search results
+4. The kitten climbed the tree.  (score = 2.36)
+
+Semantic search results
+4. The kitten climbed the tree.  (score = 0.57)
+3. Cats sleep for most of the day.  (score = 0.38)
+1. My puppy loves chasing tennis balls.  (score = 0.25)
+9. Taylor Swift released a new album.  (score = 0.23)
+15. Penguins cannot fly.  (score = 0.19)</code></pre>
+</div>
+</div>
+</section>
+<section id="keyword-search-vs.-semantic-search-1" class="slide level2">
+<h2>Keyword search vs.&nbsp;semantic search</h2>
+<div id="34898912" class="cell" data-execution_count="5">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a>compare_search(<span class="st">"doctor"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+QUERY: 'doctor'
+
+Keyword search results
+14. The doctor prescribed antibiotics.  (score = 2.58)
+
+Semantic search results
+14. The doctor prescribed antibiotics.  (score = 0.58)
+13. The physician recommended more exercise.  (score = 0.38)
+11. I rode my bicycle to school.  (score = 0.16)
+10. I listened to some great music.  (score = 0.15)
+9. Taylor Swift released a new album.  (score = 0.13)</code></pre>
+</div>
+</div>
+</section>
+<section id="keyword-search-vs.-semantic-search-2" class="slide level2">
+<h2>Keyword search vs.&nbsp;semantic search</h2>
+<div id="7f2ea72c" class="cell" data-execution_count="6">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a>compare_search(<span class="st">"bike"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+QUERY: 'bike'
+
+Keyword search results
+12. My bike has a flat tire.  (score = 2.17)
+
+Semantic search results
+11. I rode my bicycle to school.  (score = 0.58)
+12. My bike has a flat tire.  (score = 0.45)
+14. The doctor prescribed antibiotics.  (score = 0.15)
+2. My dog enjoys long walks in the park.  (score = 0.15)
+5. I baked chocolate chip cookies yesterday.  (score = 0.15)</code></pre>
+</div>
+</div>
+</section>
+<section id="keyword-search-vs.-semantic-search-3" class="slide level2">
+<h2>Keyword search vs.&nbsp;semantic search</h2>
+<div id="b4e30392" class="cell" data-execution_count="7">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a></a>compare_search(<span class="st">"storm"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+QUERY: 'storm'
+
+Keyword search results
+No keyword matches.
+
+Semantic search results
+8. It might rain tomorrow.  (score = 0.32)
+7. Vancouver received heavy rainfall today.  (score = 0.24)
+15. Penguins cannot fly.  (score = 0.13)
+14. The doctor prescribed antibiotics.  (score = 0.13)
+9. Taylor Swift released a new album.  (score = 0.13)</code></pre>
+</div>
+</div>
+</section>
+<section id="keyword-search-vs.-semantic-search-4" class="slide level2">
+<h2>Keyword search vs.&nbsp;semantic search</h2>
+<div id="11639b75" class="cell" data-execution_count="8">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a></a>compare_search(<span class="st">"songs"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+QUERY: 'songs'
+
+Keyword search results
+No keyword matches.
+
+Semantic search results
+10. I listened to some great music.  (score = 0.45)
+9. Taylor Swift released a new album.  (score = 0.37)
+8. It might rain tomorrow.  (score = 0.12)
+1. My puppy loves chasing tennis balls.  (score = 0.10)
+6. This recipe makes delicious brownies.  (score = 0.09)</code></pre>
+</div>
+</div>
+</section>
+<section id="how-can-a-computer-understand-meaning" class="slide level2">
+<h2>How can a computer understand meaning?</h2>
 <ul>
-<li>Keyword search</li>
-<li>Semantic search</li>
+<li><p>Modern AI converts words into numbers called <strong>embeddings</strong>.</p></li>
+<li><p>Words with similar meanings end up close together.</p>
+<ul>
+<li><em>cat</em> 🐱 is close to <em>kitten</em> but far away from <em>car</em></li>
+</ul></li>
+<li><p>The computer compares these numbers instead of comparing words.</p></li>
 </ul>
-<p>This is called <strong>Hybrid Search</strong>.</p>
-<p>It gives the best of both worlds.</p>
+</section>
+<section id="explore-embeddings" class="slide level2">
+<h2>Explore embeddings</h2>
+<ul>
+<li><p><a href="https://projector.tensorflow.org/">https://projector.tensorflow.org/</a></p></li>
+<li><p><a href="https://word-embeddings.wbkolleg.unibe.ch/">https://word-embeddings.wbkolleg.unibe.ch/</a></p></li>
+</ul>
+</section>
+<section id="activity-2" class="slide level2" data-background-color="#fafabc">
+<h2>Activity</h2>
+<p>Which search method would you choose?</p>
+<ol type="1">
+<li>“WH-1000XM5”</li>
+<li>“good headphones for airplanes”</li>
+<li>“a beautiful purple dress for parties”</li>
+<li>“Macbook Pro M5”</li>
+</ol>
+</section>
+<section id="hybrid-search" class="slide level2">
+<h2>Hybrid Search</h2>
+<p>Modern search systems combine keyword search and semantic search. This is called <strong>Hybrid Search</strong>.</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="keyword-search-is-great-for">Keyword search is great for</h3>
+<ul>
+<li>product names</li>
+<li>model numbers</li>
+<li>IDs</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<h3 id="semantic-search-is-great-for">Semantic search is great for</h3>
+<ul>
+<li>descriptions</li>
+<li>synonyms</li>
+<li>intent</li>
+<li>meaning</li>
+</ul>
+</div></div>
 </section>
 <section id="where-is-this-used" class="slide level2">
 <h2>Where is this used?</h2>
+<p>Almost every modern search system uses hybrid search.</p>
 <ul>
 <li>Google Search</li>
 <li>Amazon</li>
@@ -323,18 +498,18 @@ Varada Kolhatkar
 <li>ChatGPT</li>
 <li>AI assistants</li>
 </ul>
-<p>Almost every modern search system combines keyword matching with AI.</p>
 </section>
 <section id="takeaways" class="slide level2">
 <h2>Takeaways</h2>
-<p>✔ Keyword search looks for matching words.</p>
-<p>✔ Semantic search looks for matching meaning.</p>
-<p>✔ Modern AI systems combine both approaches.</p>
-<p>The goal isn’t just to find the same words.</p>
-<p>It’s to find the most useful information.</p>
+<ul>
+<li><p>Keyword search looks for matching words.</p></li>
+<li><p>Semantic search looks for matching meaning.</p></li>
+<li><p>Modern AI systems combine both approaches.</p></li>
+</ul>
+<p>The goal isn’t just to find the same words. It’s to find the most useful information.</p>
 
 
-</section></section>
+</section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">

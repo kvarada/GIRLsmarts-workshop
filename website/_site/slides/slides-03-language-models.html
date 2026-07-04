@@ -6,8 +6,8 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.9.38">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.8.27">
 
   <meta name="author" content="Varada Kolhatkar">
   <title>Introduction to AI and LLMs – Language Models</title>
@@ -17,9 +17,6 @@
   <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
   <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
   <style>
-    /* Default styles provided by pandoc.
-    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
-    */
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
     div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -32,7 +29,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-fcfa13269b934339e62dae4531bcab9f.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-c39140e133d18a701d4eb586eb580cc3.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -414,9 +411,14 @@ MILK DRINKERS ARE TURNING TO POWDER
 </ul>
 <p>Key takeaway:</p>
 <p>The more context we have, the better we can predict what comes next.</p>
+</section></section>
+<section>
+<section id="recipe-generator-demo" class="title-slide slide level1 center">
+<h1>Recipe generator demo</h1>
+
 </section>
-<section id="section-1" class="slide level2">
-<h2></h2>
+<section id="long-distance-dependencies" class="slide level2">
+<h2>Long-distance dependencies</h2>
 <p>How much context and other knowlege do you need to predict the correct next word here?</p>
 <blockquote>
 <p><em>I am studying law at the University of British Columbia in Vancouver because I want to become a …</em></p>
@@ -424,16 +426,39 @@ MILK DRINKERS ARE TURNING TO POWDER
 <blockquote>
 <p><em>I am studying medicine at the University of British Columbia because I want to become a …</em></p>
 </blockquote>
+</section>
+<section id="long-distance-dependencies-1" class="slide level2">
+<h2>Long-distance dependencies</h2>
+<blockquote>
+<p><em>I am studying law at the University of British Columbia in Vancouver because I want to become a …</em></p>
+</blockquote>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="chatgpt">ChatGPT</h3>
 <ul>
-<li><p>More context <span class="math inline">\(\rightarrow\)</span> Better predictions.</p></li>
-<li><p>The simple model we used before remembers 1 previous word.</p></li>
-<li><p>Modern language models like GPT-5 can use up to about 300,000 previous words of context!</p></li>
+<li>lawyer ⭐</li>
+<li>judge</li>
+<li>prosecutor</li>
+<li>attorney</li>
 </ul>
+</div><div class="column" style="width:50%;">
+<h3 id="limited-memory">Limited memory</h3>
+<ul>
+<li>good person</li>
+<li>student</li>
+<li>teacher</li>
+<li>better version of myself</li>
+</ul>
+</div></div>
+<p>More context <span class="math inline">\(\rightarrow\)</span> Better predictions.</p>
 </section>
 <section id="large-language-models" class="slide level2">
 <h2>Large Language Models</h2>
-<p>This is why modern language models are so powerful.</p>
-<p>Instead of looking at just one previous word, they can use information from hundreds of thousands of previous words to understand the conversation and generate much more coherent responses.</p>
+<ul>
+<li><p>Modern language models like GPT-5 can use up to about <strong>300,000</strong> previous words of context!</p></li>
+<li><p>This is why modern language models are so powerful.</p></li>
+<li><p>Instead of looking at just one previous word, they can use information from hundreds of thousands of previous words to understand the conversation and generate much more coherent responses.</p></li>
+</ul>
 
 
 </section></section>

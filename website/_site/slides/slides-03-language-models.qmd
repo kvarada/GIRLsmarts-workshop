@@ -247,7 +247,9 @@ Key takeaway:
 
 The more context we have, the better we can predict what comes next.
 
-##
+# Recipe generator demo 
+
+## Long-distance dependencies 
 
 How much context and other knowlege do you need to predict the correct next word here? 
 
@@ -255,14 +257,37 @@ How much context and other knowlege do you need to predict the correct next word
 
 > _I am studying medicine at the University of British Columbia because I want to become a ..._
 
-- More context $\rightarrow$ Better predictions.
+## Long-distance dependencies
 
-- The simple model we used before remembers 1 previous word.
+> _I am studying law at the University of British Columbia in Vancouver because I want to become a ..._
 
-- Modern language models like GPT-5 can use up to about 300,000 previous words of context!
+:::: {.columns}
+
+::: {.column width="50%"}
+### ChatGPT
+- lawyer ⭐
+- judge
+- prosecutor
+- attorney
+::: 
+::: {.column width="50%"}
+### Limited memory
+- good person
+- student
+- teacher
+- better version of myself
+:::
+::::
+
+More context $\rightarrow$ Better predictions.
 
 ## Large Language Models 
 
-This is why modern language models are so powerful.
+- Modern language models like GPT-5 can use up to about **300,000** previous words of context! 
 
-Instead of looking at just one previous word, they can use information from hundreds of thousands of previous words to understand the conversation and generate much more coherent responses.
+- This is why modern language models are so powerful. 
+
+- Instead of looking at just one previous word, they can use information from hundreds of thousands of previous words to understand the conversation and generate much more coherent responses.
+
+
+
