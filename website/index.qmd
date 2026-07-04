@@ -1,0 +1,14 @@
+# Welcome {.unnumbered}
+
+Welcome everyone to the "GIRLsmarts workshop" on Introduction to AI and LLMs. 
+
+- **When** 🕘
+    1:00 pm to 2:50 pm on July 4th, 2026
+
+- **Where?** 📍
+    [ICICS X250 UBC](https://www.cs.ubc.ca/our-department/maps), 2366 Main Mall, Vancouver, BC V6T 1Z1
+
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2603.811873286392!2d-123.25174222250277!3d49.261011572287266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548672cbd037e16d%3A0x4863aaf177384ea9!2s2366%20Main%20Mall%2C%20Vancouver%2C%20BC%20V6T%201Z4!5e0!3m2!1sen!2sca!4v1782924889810!5m2!1sen!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+
+This workshop aims to provide an accessible introduction to Artificial Intelligence (AI) and Large Language Models (LLMs).  

@@ -1,0 +1,704 @@
+[
+  {
+    "objectID": "about/index.html",
+    "href": "about/index.html",
+    "title": "Your instructor",
+    "section": "",
+    "text": "Varada Kolhatkar\n        Associate Professor of Teaching, Computer Science, Master of Data Science\n        \n            Instructor\n        \n        \n    \n\n\nNo matching items"
+  },
+  {
+    "objectID": "slides/slides-02-ai-ml-intro.html#original-vs-ai",
+    "href": "slides/slides-02-ai-ml-intro.html#original-vs-ai",
+    "title": "Introduction to AI",
+    "section": "Original vs AI?",
+    "text": "Original vs AI?\nWhich cats do you think are AI-generated?"
+  },
+  {
+    "objectID": "slides/slides-02-ai-ml-intro.html#original-vs-ai-1",
+    "href": "slides/slides-02-ai-ml-intro.html#original-vs-ai-1",
+    "title": "Introduction to AI",
+    "section": "Original vs AI?",
+    "text": "Original vs AI?\nHow did you decide?"
+  },
+  {
+    "objectID": "slides/slides-02-ai-ml-intro.html#what-are-ai-ml-dl",
+    "href": "slides/slides-02-ai-ml-intro.html#what-are-ai-ml-dl",
+    "title": "Introduction to AI",
+    "section": "What are AI, ML, DL?",
+    "text": "What are AI, ML, DL?\n\n\nArtificial Intelligence (AI): Helps computers make predictions or decisions when there isn’t a simple set of rules.  Examples: Deep Blue, early spell checkers\n\nMachine Learning (ML): Learning patterns from data instead of writing rules. Example: Spam filtering in Gmail\n\nDeep Learning (DL): Using neural networks to learn complex patterns from data. Examples: ChatGPT, Face recognition in your phone"
+  },
+  {
+    "objectID": "slides/slides-02-ai-ml-intro.html#lets-walk-through-an-example",
+    "href": "slides/slides-02-ai-ml-intro.html#lets-walk-through-an-example",
+    "title": "Introduction to AI",
+    "section": "Let’s walk through an example",
+    "text": "Let’s walk through an example\n\nHave you used search in Google Photos? You can search for “cat” and it will retrieve photos from your libraries containing cats.\nThis can be done using image classification."
+  },
+  {
+    "objectID": "slides/slides-02-ai-ml-intro.html#image-classification",
+    "href": "slides/slides-02-ai-ml-intro.html#image-classification",
+    "title": "Introduction to AI",
+    "section": "Image classification",
+    "text": "Image classification\n\nImagine we want a system that can tell cats and foxes apart.\nHow might we do this with traditional programming? With ML?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nImage ID\nWhiskers Present\nEar Size\nFace Shape\nFur Color\nEye Shape\nLabel\n\n\n\n\n1\nYes\nLarge\nRound\nMixed\nRound\nCat\n\n\n2\nYes\nMedium\nRound\nBrown\nAlmond\nCat\n\n\n3\nYes\nLarge\nPointed\nRed\nNarrow\nFox\n\n\n4\nYes\nLarge\nPointed\nRed\nNarrow\nFox\n\n\n5\nYes\nSmall\nRound\nMixed\nRound\nCat\n\n\n6\nYes\nLarge\nPointed\nRed\nNarrow\nFox\n\n\n7\nYes\nSmall\nRound\nGrey\nRound\nCat\n\n\n8\nYes\nSmall\nRound\nBlack\nRound\nCat\n\n\n9\nYes\nLarge\nPointed\nRed\nNarrow\nFox"
+  },
+  {
+    "objectID": "slides/slides-02-ai-ml-intro.html#traditional-programming-example",
+    "href": "slides/slides-02-ai-ml-intro.html#traditional-programming-example",
+    "title": "Introduction to AI",
+    "section": "Traditional programming: example",
+    "text": "Traditional programming: example\n\n\n\n\n\nYou hard-code rules. If all of the following satisfy, it’s a fox.\n\npointed face ✅\nred fur ✅\nnarrow eyes ✅\n\n\nThis works for normal cases, but what if there are exceptions"
+  },
+  {
+    "objectID": "slides/slides-02-ai-ml-intro.html#ml-approach-example",
+    "href": "slides/slides-02-ai-ml-intro.html#ml-approach-example",
+    "title": "Introduction to AI",
+    "section": "ML approach: example",
+    "text": "ML approach: example\n\n\n\n\n\nWe don’t tell the model the exact rule. Instead, we give it many labeled images, and it learns probabilistic patterns across multiple features, not rigid rules.\n\nIf fur is red \\(\\rightarrow\\) 90% chance of Fox."
+  },
+  {
+    "objectID": "slides/slides-02-ai-ml-intro.html#dl-approach-example",
+    "href": "slides/slides-02-ai-ml-intro.html#dl-approach-example",
+    "title": "Introduction to AI",
+    "section": "DL approach: example",
+    "text": "DL approach: example\n\n\n\n\n\nA neural network automatically learns which features to look at (edges \\(\\rightarrow\\) textures \\(\\rightarrow\\) objects).\nNo need to even specify face shape or fur colour. It learns relevant features on its own."
+  },
+  {
+    "objectID": "slides/slides-02-ai-ml-intro.html#what-is-ml",
+    "href": "slides/slides-02-ai-ml-intro.html#what-is-ml",
+    "title": "Introduction to AI",
+    "section": "What is ML?",
+    "text": "What is ML?\n\nML uses algorithms to learn patterns from data and build models.\n\nThese models can:\n\nMake predictions on new data\n\nSupport complex decisions\n\nGenerate new content\n\n\nML systems can improve when trained on more data.\n\nThere is no one-size-fits-all model. The right choice depends on the problem."
+  },
+  {
+    "objectID": "slides/slides-02-ai-ml-intro.html#when-to-use-ml",
+    "href": "slides/slides-02-ai-ml-intro.html#when-to-use-ml",
+    "title": "Introduction to AI",
+    "section": "When to use ML?",
+    "text": "When to use ML?\n\nWhen the problem can’t be solved with a fixed set of rules\nWhen you have lots of data and complex relationships\nWhen human decision-making is too slow or inconsistent\n\n\n\n\n\n\n\n\nApproach\nBest for\n\n\n\n\nTraditional Programming\nRules are known, data is clean/predictable\n\n\nMachine Learning\nRules are complex/unknown, data is noisy"
+  },
+  {
+    "objectID": "slides/slides-02-ai-ml-intro.html#section",
+    "href": "slides/slides-02-ai-ml-intro.html#section",
+    "title": "Introduction to AI",
+    "section": "",
+    "text": "AI systems make predictions or decisions when there isn’t a simple set of rules. For example:\n\nSpam detector \\(\\rightarrow\\) Is this spam?\nAutocomplete \\(\\rightarrow\\) What word comes next?\nFace recognition \\(\\rightarrow\\) Is this the right person?\nNetflix \\(\\rightarrow\\) What movie might you like?\n\nWhereas:\n\nCalculator \\(\\rightarrow\\) follows mathematical rules\nStopwatch \\(\\rightarrow\\) counts time"
+  },
+  {
+    "objectID": "slides/slides-02-ai-ml-intro.html#section-1",
+    "href": "slides/slides-02-ai-ml-intro.html#section-1",
+    "title": "Introduction to AI",
+    "section": "",
+    "text": "Would you solve this with AI?\n\n\n\nProblem\nAI?\n\n\n\n\n17 × 24\n\n\n\nSort a list of numbers\n\n\n\nIs this email spam?\n\n\n\nAddressing mental health issues\n\n\n\nTranslate this sentence\n\n\n\nRecommend a movie\n\n\n\nPredict tomorrow’s weather"
+  },
+  {
+    "objectID": "slides/slides-02-ai-ml-intro.html#therapists-using-chatgpt-secretly",
+    "href": "slides/slides-02-ai-ml-intro.html#therapists-using-chatgpt-secretly",
+    "title": "Introduction to AI",
+    "section": "Therapists using ChatGPT secretly 😔",
+    "text": "Therapists using ChatGPT secretly 😔"
+  },
+  {
+    "objectID": "slides/slides-02-ai-ml-intro.html#recap-when-is-ai-suitable",
+    "href": "slides/slides-02-ai-ml-intro.html#recap-when-is-ai-suitable",
+    "title": "Introduction to AI",
+    "section": "Recap: When is AI suitable?",
+    "text": "Recap: When is AI suitable?\n\nAI excels when the problem involve identifying complex patterns or relationships in large datasets that are difficult for humans to discern manually.\nHuman experts are good with problems which require deep contextual understanding, ethical judgment, creative input, or emotional intelligence."
+  },
+  {
+    "objectID": "workshop.html",
+    "href": "workshop.html",
+    "title": "Overview",
+    "section": "",
+    "text": "Title\n\n\n\ntime\n\n\n\nDescription\n\n\n\n\n\n\n\n\nWelcome and getting started\n\n\n15:00 - 15:05\n\n\nHello and welcome to the workshop!\n\n\n\n\n\n\nAI and ML Intro\n\n\n \n\n\nIntroduction to AI and Machine Learning\n\n\n\n\n\n\nLanguage Models\n\n\n \n\n\nIntroduction to NLP and Language Models\n\n\n\n\n\n\nKeyword and Semantic Search\n\n\n \n\n\nSearching for products\n\n\n\n\n\n\nSummary and wrap up\n\n\n16:25 - 16:30\n\n\n \n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Workshop",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "workshop.html#schedule",
+    "href": "workshop.html#schedule",
+    "title": "Overview",
+    "section": "",
+    "text": "Title\n\n\n\ntime\n\n\n\nDescription\n\n\n\n\n\n\n\n\nWelcome and getting started\n\n\n15:00 - 15:05\n\n\nHello and welcome to the workshop!\n\n\n\n\n\n\nAI and ML Intro\n\n\n \n\n\nIntroduction to AI and Machine Learning\n\n\n\n\n\n\nLanguage Models\n\n\n \n\n\nIntroduction to NLP and Language Models\n\n\n\n\n\n\nKeyword and Semantic Search\n\n\n \n\n\nSearching for products\n\n\n\n\n\n\nSummary and wrap up\n\n\n16:25 - 16:30\n\n\n \n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Workshop",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "workshop-04.html",
+    "href": "workshop-04.html",
+    "title": "Keyword and Semantic Search",
+    "section": "",
+    "text": "View slides in full screen"
+  },
+  {
+    "objectID": "workshop-04.html#slides",
+    "href": "workshop-04.html#slides",
+    "title": "Keyword and Semantic Search",
+    "section": "",
+    "text": "View slides in full screen"
+  },
+  {
+    "objectID": "workshop-04.html#outline",
+    "href": "workshop-04.html#outline",
+    "title": "Keyword and Semantic Search",
+    "section": "Outline",
+    "text": "Outline\n\nKeyword search\nSemantic search\nNatural language queries"
+  },
+  {
+    "objectID": "workshop-02.html",
+    "href": "workshop-02.html",
+    "title": "AI and ML Intro",
+    "section": "",
+    "text": "View slides in full screen",
+    "crumbs": [
+      "Workshop",
+      "AI and ML Intro"
+    ]
+  },
+  {
+    "objectID": "workshop-02.html#slides",
+    "href": "workshop-02.html#slides",
+    "title": "AI and ML Intro",
+    "section": "",
+    "text": "View slides in full screen",
+    "crumbs": [
+      "Workshop",
+      "AI and ML Intro"
+    ]
+  },
+  {
+    "objectID": "workshop-02.html#outline",
+    "href": "workshop-02.html#outline",
+    "title": "AI and ML Intro",
+    "section": "Outline",
+    "text": "Outline\n\nWhat is AI?\nWhat is ML?\nMachine learning terminology",
+    "crumbs": [
+      "Workshop",
+      "AI and ML Intro"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome",
+    "section": "",
+    "text": "Welcome\nWelcome everyone to the “GIRLsmarts workshop” on Introduction to AI and LLMs.\n\nWhen 🕘 1:00 pm to 2:50 pm on July 4th, 2026\nWhere? 📍 ICICS X250 UBC, 2366 Main Mall, Vancouver, BC V6T 1Z1\n\n\n\nThis workshop aims to provide an accessible introduction to Artificial Intelligence (AI) and Large Language Models (LLMs)."
+  },
+  {
+    "objectID": "workshop-01.html",
+    "href": "workshop-01.html",
+    "title": "Welcome and getting started",
+    "section": "",
+    "text": "View slides in full screen",
+    "crumbs": [
+      "Workshop",
+      "Welcome and getting started"
+    ]
+  },
+  {
+    "objectID": "workshop-01.html#slides",
+    "href": "workshop-01.html#slides",
+    "title": "Welcome and getting started",
+    "section": "",
+    "text": "View slides in full screen",
+    "crumbs": [
+      "Workshop",
+      "Welcome and getting started"
+    ]
+  },
+  {
+    "objectID": "workshop-01.html#outline",
+    "href": "workshop-01.html#outline",
+    "title": "Welcome and getting started",
+    "section": "Outline",
+    "text": "Outline\n\nWelcome to the workshop!\nIntroductions and meet your neighbors\nAbout the learning objective of the workshop",
+    "crumbs": [
+      "Workshop",
+      "Welcome and getting started"
+    ]
+  },
+  {
+    "objectID": "workshop-03.html",
+    "href": "workshop-03.html",
+    "title": "Language Models",
+    "section": "",
+    "text": "View slides in full screen",
+    "crumbs": [
+      "Workshop",
+      "Language Models"
+    ]
+  },
+  {
+    "objectID": "workshop-03.html#slides",
+    "href": "workshop-03.html#slides",
+    "title": "Language Models",
+    "section": "",
+    "text": "View slides in full screen",
+    "crumbs": [
+      "Workshop",
+      "Language Models"
+    ]
+  },
+  {
+    "objectID": "workshop-03.html#outline",
+    "href": "workshop-03.html#outline",
+    "title": "Language Models",
+    "section": "Outline",
+    "text": "Outline\n\nDealing with natural language\nLanguage models",
+    "crumbs": [
+      "Workshop",
+      "Language Models"
+    ]
+  },
+  {
+    "objectID": "workshop-05.html",
+    "href": "workshop-05.html",
+    "title": "Summary and wrap up",
+    "section": "",
+    "text": "View slides in full screen"
+  },
+  {
+    "objectID": "workshop-05.html#slides",
+    "href": "workshop-05.html#slides",
+    "title": "Summary and wrap up",
+    "section": "",
+    "text": "View slides in full screen"
+  },
+  {
+    "objectID": "workshop-05.html#outline",
+    "href": "workshop-05.html#outline",
+    "title": "Summary and wrap up",
+    "section": "Outline",
+    "text": "Outline\n\nSummary\nThanks\nSurvey"
+  },
+  {
+    "objectID": "slides/slides-01-intro.html#focus-on-the-breath",
+    "href": "slides/slides-01-intro.html#focus-on-the-breath",
+    "title": "Welcome to the workshop!",
+    "section": "Focus on the breath!",
+    "text": "Focus on the breath!"
+  },
+  {
+    "objectID": "slides/slides-01-intro.html#section",
+    "href": "slides/slides-01-intro.html#section",
+    "title": "Welcome to the workshop!",
+    "section": "",
+    "text": "All these systems are learned from examples.\n\nSome learned patterns in images.\nSome learned patterns in people’s preferences.\nSome learned patterns in language.\n\nThe methods become more sophisticated, but the core idea stays the same: AI learns patterns from data."
+  },
+  {
+    "objectID": "slides/slides-01-intro.html#quick-warm-up",
+    "href": "slides/slides-01-intro.html#quick-warm-up",
+    "title": "Welcome to the workshop!",
+    "section": "Quick warm-up",
+    "text": "Quick warm-up\nPair up with someone nearby.\nQuestion: Where have you seen AI in real life?\nExamples could include:\n\nphone cameras\nrecommendations\nautocomplete\n…"
+  },
+  {
+    "objectID": "slides/slides-01-intro.html#what-are-we-doing-today",
+    "href": "slides/slides-01-intro.html#what-are-we-doing-today",
+    "title": "Welcome to the workshop!",
+    "section": "What are we doing today?",
+    "text": "What are we doing today?\nWe are going to open up the black box a little. By the end, you should be able to explain:\n\nwhat people mean by AI, machine learning, and deep learning\nwhy predicting the next word can be powerful\n\n\nI’m attending this workshop because I want to learn about ___.\n\n\nwhy search based on meaning can beat search based only on words\n\n\nIf I search for kitten, should I find something about cats?"
+  },
+  {
+    "objectID": "slides/slides-01-intro.html#the-big-idea",
+    "href": "slides/slides-01-intro.html#the-big-idea",
+    "title": "Welcome to the workshop!",
+    "section": "The big idea",
+    "text": "The big idea\nAI systems are not magic. They often work by learning patterns from examples!"
+  },
+  {
+    "objectID": "slides/slides-01-intro.html#image-classification",
+    "href": "slides/slides-01-intro.html#image-classification",
+    "title": "Welcome to the workshop!",
+    "section": "Image classification",
+    "text": "Image classification\nImagine we want to write a program that can tell cats and foxes apart. How would you do it?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nImage ID\nWhiskers Present\nEar Size\nFace Shape\nFur Color\nEye Shape\nLabel\n\n\n\n\n1\nYes\nLarge\nRound\nMixed\nRound\nCat\n\n\n2\nYes\nMedium\nRound\nBrown\nAlmond\nCat\n\n\n3\nYes\nLarge\nPointed\nRed\nNarrow\nFox\n\n\n4\nYes\nLarge\nPointed\nRed\nNarrow\nFox\n\n\n5\nYes\nSmall\nRound\nMixed\nRound\nCat\n\n\n6\nYes\nLarge\nPointed\nRed\nNarrow\nFox\n\n\n7\nYes\nSmall\nRound\nGrey\nRound\nCat\n\n\n8\nYes\nSmall\nRound\nBlack\nRound\nCat\n\n\n9\nYes\nLarge\nPointed\nRed\nNarrow\nFox"
+  },
+  {
+    "objectID": "slides/slides-01-intro.html#recommendations",
+    "href": "slides/slides-01-intro.html#recommendations",
+    "title": "Welcome to the workshop!",
+    "section": "Recommendations",
+    "text": "Recommendations\nImagine that you want to recommend a movie to Pat. Which movie would you recommend?"
+  },
+  {
+    "objectID": "slides/slides-01-intro.html#spam-detection",
+    "href": "slides/slides-01-intro.html#spam-detection",
+    "title": "Welcome to the workshop!",
+    "section": "Spam detection",
+    "text": "Spam detection\nIf you’re given this data.\n\n\n\nEmail\nSpam?\n\n\n\n\n🎉 CONGRATULATIONS! YOU WON $1000!\n✓\n\n\nYour package has shipped\n✗\n\n\nAssignment due tomorrow\n✗\n\n\nYOU WON A FREE PRIZE 🎁!\n✓\n\n\nDinner tonight?\n✗\n\n\nCan we meet at 3 PM?\n✗\n\n\n\nHow would YOU build a spam detector?"
+  },
+  {
+    "objectID": "slides/slides-01-intro.html#section-1",
+    "href": "slides/slides-01-intro.html#section-1",
+    "title": "Welcome to the workshop!",
+    "section": "",
+    "text": "All these systems are learned from examples.\n\nSome learned patterns in images.\nSome learned patterns in people’s preferences.\nSome learned patterns in language.\n\nThe methods become more sophisticated, but the core idea stays the same: AI learns patterns from data—not magic."
+  },
+  {
+    "objectID": "slides/slides-01-intro.html#workshop-map",
+    "href": "slides/slides-01-intro.html#workshop-map",
+    "title": "Welcome to the workshop!",
+    "section": "Workshop map",
+    "text": "Workshop map\nWe’ll explore three questions:\n\nWhat is AI?\nLanguage Models: How does your phone know what word you’ll type next?\nSearch: Why does Google understand your question even if the exact words don’t appear?"
+  },
+  {
+    "objectID": "slides/slides-01-intro.html#how-we-will-work",
+    "href": "slides/slides-01-intro.html#how-we-will-work",
+    "title": "Welcome to the workshop!",
+    "section": "How we will work",
+    "text": "How we will work\nThis is a hands-on workshop. You will be asked to:\n\ntalk to people nearby\ntest what works and what fails\nask questions when something feels unclear"
+  },
+  {
+    "objectID": "slides/slides-01-intro.html#a-useful-workshop-rule",
+    "href": "slides/slides-01-intro.html#a-useful-workshop-rule",
+    "title": "Welcome to the workshop!",
+    "section": "A useful workshop rule",
+    "text": "A useful workshop rule\nWhen an AI system gives an answer, ask:\n\nWhat pattern might it be using?\n\nThen ask:\n\nWhen might that pattern fail?"
+  },
+  {
+    "objectID": "slides/slides-01-intro.html#today-you-are-the-testers",
+    "href": "slides/slides-01-intro.html#today-you-are-the-testers",
+    "title": "Welcome to the workshop!",
+    "section": "Today, you are the testers",
+    "text": "Today, you are the testers\nYour job is not just to use the demos.\nYour job is to investigate them:\n\nWhat does the system do well?\nWhat does it misunderstand?\nWhat examples confuse it?\nWhat would make it better?"
+  },
+  {
+    "objectID": "slides/slides-01-intro.html#source-of-the-website",
+    "href": "slides/slides-01-intro.html#source-of-the-website",
+    "title": "Welcome to the workshop!",
+    "section": "Source of the website",
+    "text": "Source of the website\nThese slides and activities were made with Quarto.\nSource: https://github.com/kvarada/GIRLsmarts-workshop"
+  },
+  {
+    "objectID": "slides/slides-03-language-models.html#every-day-you-interact-with-language-ai",
+    "href": "slides/slides-03-language-models.html#every-day-you-interact-with-language-ai",
+    "title": "Language Models",
+    "section": "Every day you interact with language AI",
+    "text": "Every day you interact with language AI\n\n💬 ChatGPT answers questions\n📱 Your phone finishes your sentences\n📧 Gmail suggests replies\n🌍 Google Translate translates languages\n🔎 Google understands your searches\n\nHow do computers do this? 🤔"
+  },
+  {
+    "objectID": "slides/slides-03-language-models.html#language-can-be-ambiguous",
+    "href": "slides/slides-03-language-models.html#language-can-be-ambiguous",
+    "title": "Language Models",
+    "section": "Language can be ambiguous",
+    "text": "Language can be ambiguous"
+  },
+  {
+    "objectID": "slides/slides-03-language-models.html#section",
+    "href": "slides/slides-03-language-models.html#section",
+    "title": "Language Models",
+    "section": "",
+    "text": "Humans solve these problems effortlessly because we use\n\ncontext\ncommon sense\nworld knowledge\n\nComputers don’t naturally have these abilities."
+  },
+  {
+    "objectID": "slides/slides-03-language-models.html#what-is-natural-language-processing-nlp",
+    "href": "slides/slides-03-language-models.html#what-is-natural-language-processing-nlp",
+    "title": "Language Models",
+    "section": "What is Natural Language Processing (NLP)?",
+    "text": "What is Natural Language Processing (NLP)?\nNatural Language Processing (NLP) is the field of AI that focuses on enabling computers to understand, interpret, and generate human language."
+  },
+  {
+    "objectID": "slides/slides-03-language-models.html#a-surprising-idea",
+    "href": "slides/slides-03-language-models.html#a-surprising-idea",
+    "title": "Language Models",
+    "section": "A surprising idea",
+    "text": "A surprising idea\nInstead of teaching computers grammar …\nWhat if we simply taught them to predict the next word? Could that really work?"
+  },
+  {
+    "objectID": "slides/slides-03-language-models.html#context-matters",
+    "href": "slides/slides-03-language-models.html#context-matters",
+    "title": "Language Models",
+    "section": "Context matters",
+    "text": "Context matters\nWhich word comes next?\n\nI went to the bank to deposit some ______\n\nvs.\n\nI sat on the bank of the ______\n\n\nSame word. Different meanings.\nLanguage models use context."
+  },
+  {
+    "objectID": "slides/slides-03-language-models.html#language-models-assign-probabilities",
+    "href": "slides/slides-03-language-models.html#language-models-assign-probabilities",
+    "title": "Language Models",
+    "section": "Language models assign probabilities",
+    "text": "Language models assign probabilities\nInstead of predicting one answer…\nthey estimate many possibilities.\n\nPeanut butter and\n\n\n\n\nNext word\nProbability\n\n\n\n\njelly\n55%\n\n\nbanana\n25%\n\n\nhoney\n10%\n\n\ncookies\n5%\n\n\n…\n…\n\n\n\nThe highest probability usually becomes the prediction."
+  },
+  {
+    "objectID": "slides/slides-03-language-models.html#why-does-this-work",
+    "href": "slides/slides-03-language-models.html#why-does-this-work",
+    "title": "Language Models",
+    "section": "Why does this work?",
+    "text": "Why does this work?\nIf a computer becomes really good at predicting the next word, it has learned\n\ngrammar\nspelling\ncommon phrases\nfacts\nsome reasoning patterns\n\nwithout being explicitly programmed."
+  },
+  {
+    "objectID": "slides/slides-03-language-models.html#from-prediction-to-applications",
+    "href": "slides/slides-03-language-models.html#from-prediction-to-applications",
+    "title": "Language Models",
+    "section": "From prediction to applications",
+    "text": "From prediction to applications\nGood next-word prediction enables\n\n✍️ Text generation\n🌍 Translation\n📝 Summarization\n💬 Chatbots\n🔎 Semantic search\n\nModern LLMs like ChatGPT build on this same idea."
+  },
+  {
+    "objectID": "slides/slides-03-language-models.html#for-example",
+    "href": "slides/slides-03-language-models.html#for-example",
+    "title": "Language Models",
+    "section": "For example",
+    "text": "For example\n\nP(I have read this book) &gt; P(eye have red this book) or\nP(book | read this) &gt; P(book | red this)"
+  },
+  {
+    "objectID": "slides/slides-03-language-models.html#activity-build-a-language-model-.background-colorfafabc",
+    "href": "slides/slides-03-language-models.html#activity-build-a-language-model-.background-colorfafabc",
+    "title": "Language Models",
+    "section": "Activity: Build a Language Model {.background-color=“#fafabc”}",
+    "text": "Activity: Build a Language Model {.background-color=“#fafabc”}\nWe need 10–15 volunteers.\n\n\nGroup 1: Full-Context Storytellers\n\nEach volunteer receives the entire sequence generated so far.\nPredict the next word.\nPass the updated sequence to the next person.\nThe last volunteer reads the final sentence.\n\n\nGroup 2: One-Word Memory Storytellers\n\nEach volunteer receives only the previous word.\nPredict the next word.\nPass only your predicted word to the next person.\nCollectively generated the final sentence."
+  },
+  {
+    "objectID": "slides/slides-03-language-models.html#reflection",
+    "href": "slides/slides-03-language-models.html#reflection",
+    "title": "Language Models",
+    "section": "Reflection",
+    "text": "Reflection\n\nWhich story was easier to continue?\nWhich story made more sense?\nWhat information did you use to predict the next word?\nWhat happened when you had very little context?\n\nKey takeaway:\nThe more context we have, the better we can predict what comes next."
+  },
+  {
+    "objectID": "slides/slides-03-language-models.html#section-1",
+    "href": "slides/slides-03-language-models.html#section-1",
+    "title": "Language Models",
+    "section": "",
+    "text": "How much context and other knowlege do you need to predict the correct next word here?\n\nI am studying law at the University of British Columbia in Vancouver because I want to become a …\n\n\nI am studying medicine at the University of British Columbia because I want to become a …\n\n\nMore context \\(\\rightarrow\\) Better predictions.\nThe simple model we used before remembers 1 previous word.\nModern language models like GPT-5 can use up to about 300,000 previous words of context!"
+  },
+  {
+    "objectID": "slides/slides-05-summary.html#what-did-we-cover",
+    "href": "slides/slides-05-summary.html#what-did-we-cover",
+    "title": "Summary and conclusion",
+    "section": "What did we cover?",
+    "text": "What did we cover?\n\nIntroduction to linear models\nIntroduction to deep learning and transfer learning"
+  },
+  {
+    "objectID": "slides/slides-05-summary.html#a-bit-about-our-mds-program",
+    "href": "slides/slides-05-summary.html#a-bit-about-our-mds-program",
+    "title": "Summary and conclusion",
+    "section": "A bit about our MDS program",
+    "text": "A bit about our MDS program\n\nMaster of Data Science (MDS) is a 10-month accelerated professional program\n24 1-credit courses in 8 months + 2 months Capstone with industry/academia partners\nUnique partnership between CS, Stats, and Linguistics\nCurriculum designed from scratch"
+  },
+  {
+    "objectID": "slides/slides-05-summary.html#our-audience",
+    "href": "slides/slides-05-summary.html#our-audience",
+    "title": "Summary and conclusion",
+    "section": "Our audience",
+    "text": "Our audience\n\nIndividuals with basic knowledge of programming, statistics, calculus, and linear algebra.\nProfessionals currently working with data, seeking a systematic understanding of data science to effectively solve their data problems\nThose looking for a career change, feeling bored, or aiming to upskill\nFresh undergrads with research experience or who have completed co-ops or internships"
+  },
+  {
+    "objectID": "slides/slides-05-summary.html#some-possibilities",
+    "href": "slides/slides-05-summary.html#some-possibilities",
+    "title": "Summary and conclusion",
+    "section": "Some possibilities",
+    "text": "Some possibilities\n\n\n\nSubmit a data science related Capstone project and work with our students\nIf you are interested in applying to the program check out our web page: https://ubc-mds.github.io/"
+  },
+  {
+    "objectID": "slides/slides-05-summary.html#how-did-we-do",
+    "href": "slides/slides-05-summary.html#how-did-we-do",
+    "title": "Summary and conclusion",
+    "section": "How did we do?",
+    "text": "How did we do?\n\nThat’s it! Thank you for attending our workshop.\nWe would greatly appreciate your feedback.\n\nFeedback form: )\n\nYour input will also help us advocate for organizing more workshops like this in the future."
+  },
+  {
+    "objectID": "slides/slides-03-language-models.html#ambiguous-news-headlines",
+    "href": "slides/slides-03-language-models.html#ambiguous-news-headlines",
+    "title": "Language Models",
+    "section": "Ambiguous news headlines",
+    "text": "Ambiguous news headlines\n\nPROSTITUTES APPEAL TO POPE\n\n\nKICKING BABY CONSIDERED TO BE HEALTHY\n\n\nMILK DRINKERS ARE TURNING TO POWDER\n\nWhy are these funny?"
+  },
+  {
+    "objectID": "slides/slides-03-language-models.html#activity-become-a-language-model-.smaller-.background-colorfafabc",
+    "href": "slides/slides-03-language-models.html#activity-become-a-language-model-.smaller-.background-colorfafabc",
+    "title": "Language Models",
+    "section": "Activity: Become a language model {.smaller .background-color=“#fafabc”}",
+    "text": "Activity: Become a language model {.smaller .background-color=“#fafabc”}\nGuess the next word.\n\n\n\nPrompt\nYour prediction\n\n\n\n\nPeanut butter and …\n\n\n\nMy dog at my …\n\n\n\nHappy birthday …\n\n\n\nThe capital of Canada is …\n\n\n\n\nCan you think of more than one possible answer?"
+  },
+  {
+    "objectID": "slides/slides-03-language-models.html#activity-become-a-language-model",
+    "href": "slides/slides-03-language-models.html#activity-become-a-language-model",
+    "title": "Language Models",
+    "section": "Activity: Become a language model",
+    "text": "Activity: Become a language model\nGuess the next word.\n\n\n\nPrompt\nYour prediction\n\n\n\n\nPenut butter and …\n\n\n\nToo much …\n\n\n\nMy dog at my …\n\n\n\nHappy birthday …\n\n\n\nThe capital of Canada is …\n\n\n\n\nThere isn’t always one correct next word!!"
+  },
+  {
+    "objectID": "slides/slides-03-language-models.html#activity-become-a-language-model-.background-colorfafabc",
+    "href": "slides/slides-03-language-models.html#activity-become-a-language-model-.background-colorfafabc",
+    "title": "Language Models",
+    "section": "Activity: Become a language model {.background-color=“#fafabc”}",
+    "text": "Activity: Become a language model {.background-color=“#fafabc”}\nGuess the next word.\n\n\n\nPrompt\nYour prediction\n\n\n\n\nPeanut butter and …\n\n\n\nMy dog at my …\n\n\n\nHappy birthday …\n\n\n\nThe capital of Canada is …\n\n\n\n\nCan you think of more than one possible answer?"
+  },
+  {
+    "objectID": "slides/slides-03-language-models.html#activity-build-a-language-model",
+    "href": "slides/slides-03-language-models.html#activity-build-a-language-model",
+    "title": "Language Models",
+    "section": "Activity: Build a Language Model",
+    "text": "Activity: Build a Language Model\nWe need 10–15 volunteers.\n\n\nGroup 1: Full-Context Storytellers\n\nEach volunteer receives the entire sequence generated so far.\nPredict the next word.\nPass the updated sequence to the next person.\nThe last volunteer reads the final sentence.\n\n\nGroup 2: One-Word Memory Storytellers\n\nEach volunteer receives only the previous word.\nPredict the next word.\nPass only your predicted word to the next person.\nCollectively generated the final sentence."
+  },
+  {
+    "objectID": "slides/slides-03-language-models.html#section-2",
+    "href": "slides/slides-03-language-models.html#section-2",
+    "title": "Language Models",
+    "section": "",
+    "text": "This is why modern language models are so powerful.\nInstead of looking at just one previous word, they can use information from hundreds of thousands of previous words to understand the conversation and generate much more coherent responses."
+  },
+  {
+    "objectID": "slides/slides-03-language-models.html#large-language-models",
+    "href": "slides/slides-03-language-models.html#large-language-models",
+    "title": "Language Models",
+    "section": "Large Language Models",
+    "text": "Large Language Models\nThis is why modern language models are so powerful.\nInstead of looking at just one previous word, they can use information from hundreds of thousands of previous words to understand the conversation and generate much more coherent responses."
+  },
+  {
+    "objectID": "slides/slides-01-intro.html#learning",
+    "href": "slides/slides-01-intro.html#learning",
+    "title": "Welcome to the workshop!",
+    "section": "Learning",
+    "text": "Learning\nToday we will explore how computers can learn from examples, predict language, and search by meaning."
+  },
+  {
+    "objectID": "slides/slides-01-intro.html#learning-goals",
+    "href": "slides/slides-01-intro.html#learning-goals",
+    "title": "Welcome to the workshop!",
+    "section": "🎯 Learning goals",
+    "text": "🎯 Learning goals\n\nExplain what artificial intelligence (AI) is and what it is not.\nDescribe how large language models (LLMs) generate text by learning patterns from data.\nCompare keyword search and semantic search, and explain why semantic search often returns more relevant results."
+  },
+  {
+    "objectID": "slides/slides-02-ai-ml-intro.html#when-is-ai-a-good-choice",
+    "href": "slides/slides-02-ai-ml-intro.html#when-is-ai-a-good-choice",
+    "title": "Introduction to AI",
+    "section": "When is AI a good choice?",
+    "text": "When is AI a good choice?\nAI isn’t “better computing”; it’s appropriate for a different class of problems. It works well when…\n\n✅ There are lots of examples or data to learn from.\n✅ The problem involves finding complex patterns or making predictions.\n✅ There isn’t a simple set of rules that always gives the right answer."
+  },
+  {
+    "objectID": "slides/slides-02-ai-ml-intro.html#humans-are-essential-when-a-problem-requires",
+    "href": "slides/slides-02-ai-ml-intro.html#humans-are-essential-when-a-problem-requires",
+    "title": "Introduction to AI",
+    "section": "Humans are essential when a problem requires…",
+    "text": "Humans are essential when a problem requires…\n\n🧠 Common sense and deep understanding of the situation.\n❤️ Empathy, ethics, or caring for people.\n💡 Creativity and defining new goals.\n⚖️ Making important decisions where mistakes have serious consequences."
+  },
+  {
+    "objectID": "slides/slides-02-ai-ml-intro.html#when-do-we-still-need-humans",
+    "href": "slides/slides-02-ai-ml-intro.html#when-do-we-still-need-humans",
+    "title": "Introduction to AI",
+    "section": "When do we still need humans?",
+    "text": "When do we still need humans?\nHumans are essential when a problem requires…\n\n🧠 Common sense and deep understanding of the situation.\n❤️ Empathy, ethics, or caring for people.\n⚖️ Making important decisions where mistakes have serious consequences.\n…\n\nAI can sometimes assist people, but humans should make the important decisions when empathy, trust, and responsibility matter."
+  },
+  {
+    "objectID": "slides/slides-04-search.html#can-computers-search-like-humans",
+    "href": "slides/slides-04-search.html#can-computers-search-like-humans",
+    "title": "Keyword and Semantic Search",
+    "section": "Can computers search like humans?",
+    "text": "Can computers search like humans?\nImagine you’re shopping online.\n\n\nYou search for\n“headphones for studying”\n\nProducts\n\nGaming Headset 🎮\nSony WH-1000XM6 Noise-Cancelling Headphones 🎧\nBluetooth Speaker 🔈\nStudy Desk\n\n\nWhich product should appear first?"
+  },
+  {
+    "objectID": "slides/slides-04-search.html#method-1-keyword-search",
+    "href": "slides/slides-04-search.html#method-1-keyword-search",
+    "title": "Keyword and Semantic Search",
+    "section": "Method 1: Keyword Search",
+    "text": "Method 1: Keyword Search\nThe computer looks for the exact words you typed.\n\n\n“Headphones for studying”\n\nProducts\n\nGaming Headset 🎮\nSony WH-1000XM6 Noise-Cancelling Headphones 🎧\nBluetooth Speaker 🔈\nStudy Desk"
+  },
+  {
+    "objectID": "slides/slides-04-search.html#activity",
+    "href": "slides/slides-04-search.html#activity",
+    "title": "Keyword and Semantic Search",
+    "section": "Activity",
+    "text": "Activity\nSuppose a search engine uses keyword search.\nYou search for:\n\nHeadphones for studying\n\nWhich of these products would be matched?\n\nBose QuietComfort Noise-Cancelling Headphones 🎧\nSony WH-1000XM6 Wireless Headphones 🎧\nStudy Desk 📚\nHeadphones Carrying Case 🎒\nHomework Planner 📅"
+  },
+  {
+    "objectID": "slides/slides-04-search.html#activity-1",
+    "href": "slides/slides-04-search.html#activity-1",
+    "title": "Keyword and Semantic Search",
+    "section": "Activity",
+    "text": "Activity\nWould semantic search help?\n\n“rainproof jogging equipment”\n“chair for back pain”\n“movie about dinosaurs”\n“phone with a great camera”\n\nDiscuss with your neighbour."
+  },
+  {
+    "objectID": "slides/slides-04-search.html#how-can-a-computer-understand-meaning",
+    "href": "slides/slides-04-search.html#how-can-a-computer-understand-meaning",
+    "title": "Keyword and Semantic Search",
+    "section": "How can a computer understand meaning?",
+    "text": "How can a computer understand meaning?\nModern AI converts words into numbers called embeddings.\nWords with similar meanings end up close together.\n(cat) 🐱\nis close to\n(kitten)\nbut far away from\n(car)\nThe computer compares these numbers instead of comparing words."
+  },
+  {
+    "objectID": "slides/slides-04-search.html#which-would-you-use",
+    "href": "slides/slides-04-search.html#which-would-you-use",
+    "title": "Keyword and Semantic Search",
+    "section": "Which would you use?",
+    "text": "Which would you use?\nSearch:\n\n“WH-1000XM5”\n\nBest choice?\n✅ Keyword search\nSearch:\n\n“good headphones for airplanes”\n\nBest choice?\n✅ Semantic search"
+  },
+  {
+    "objectID": "slides/slides-04-search.html#the-best-systems-use-both",
+    "href": "slides/slides-04-search.html#the-best-systems-use-both",
+    "title": "Keyword and Semantic Search",
+    "section": "The best systems use both",
+    "text": "The best systems use both\nModern search engines and AI assistants combine\n\nKeyword search\nSemantic search\n\nThis is called Hybrid Search.\nIt gives the best of both worlds."
+  },
+  {
+    "objectID": "slides/slides-04-search.html#where-is-this-used",
+    "href": "slides/slides-04-search.html#where-is-this-used",
+    "title": "Keyword and Semantic Search",
+    "section": "Where is this used?",
+    "text": "Where is this used?\n\nGoogle Search\nAmazon\nSpotify\nNetflix\nYouTube\nChatGPT\nAI assistants\n\nAlmost every modern search system combines keyword matching with AI."
+  },
+  {
+    "objectID": "slides/slides-04-search.html#takeaways",
+    "href": "slides/slides-04-search.html#takeaways",
+    "title": "Keyword and Semantic Search",
+    "section": "Takeaways",
+    "text": "Takeaways\n✔ Keyword search looks for matching words.\n✔ Semantic search looks for matching meaning.\n✔ Modern AI systems combine both approaches.\nThe goal isn’t just to find the same words.\nIt’s to find the most useful information."
+  },
+  {
+    "objectID": "slides/slides-04-search.html#section",
+    "href": "slides/slides-04-search.html#section",
+    "title": "Keyword and Semantic Search",
+    "section": "",
+    "text": "How does a computer decide which result is the most relevant?"
+  },
+  {
+    "objectID": "slides/slides-04-search.html#two-ways-computers-search",
+    "href": "slides/slides-04-search.html#two-ways-computers-search",
+    "title": "Keyword and Semantic Search",
+    "section": "Two ways computers search",
+    "text": "Two ways computers search\nHow does a computer decide which result is the most relevant?\nMethod 1: Keyword Search The computer looks for the exact words you typed.\nQuery:\n\nheadphones for studying\n\nDocument:\n\nSony WH-1000XM6 Noise-Cancelling Headphones\n\nShared words:\nHeadphones\nMissing words:\n✗ studying\nThe computer only notices the words that match."
+  },
+  {
+    "objectID": "slides/slides-02-ai-ml-intro.html#what-is-artificial-intelligence",
+    "href": "slides/slides-02-ai-ml-intro.html#what-is-artificial-intelligence",
+    "title": "Introduction to AI",
+    "section": "What is Artificial Intelligence?",
+    "text": "What is Artificial Intelligence?\nArtificial Intelligence (AI) is about building computers that can make predictions or decisions in situations where there isn’t a simple set of rules to follow.\nInstead of being explicitly programmed for every situation, AI systems learn patterns from data."
+  },
+  {
+    "objectID": "slides/slides-02-ai-ml-intro.html#discussion",
+    "href": "slides/slides-02-ai-ml-intro.html#discussion",
+    "title": "Introduction to AI",
+    "section": "Discussion",
+    "text": "Discussion\nWhat do the AI examples have in common?\n\nThey make predictions or decisions.\nThere isn’t always one correct answer.\nThey have to deal with uncertainty.\n\nFor example:\n\nIs this email spam?\nWhat word will you type next?\nIs this really your face?\nWhat did the user just say?"
+  },
+  {
+    "objectID": "slides/slides-02-ai-ml-intro.html#what-is-artificial-intelligence-1",
+    "href": "slides/slides-02-ai-ml-intro.html#what-is-artificial-intelligence-1",
+    "title": "Introduction to AI",
+    "section": "What is Artificial Intelligence?",
+    "text": "What is Artificial Intelligence?\nArtificial Intelligence (AI) is about building computers that can make predictions or decisions in situations where there isn’t a simple set of rules to follow.\nInstead of being explicitly programmed for every situation, AI systems learn patterns from data."
+  },
+  {
+    "objectID": "slides/slides-02-ai-ml-intro.html#which-of-these-do-you-think-use-ai",
+    "href": "slides/slides-02-ai-ml-intro.html#which-of-these-do-you-think-use-ai",
+    "title": "Introduction to AI",
+    "section": "Which of these do you think use AI?",
+    "text": "Which of these do you think use AI?\n\nGoogle’s spam detector 📧\nAutocomplete on your phone 📱\nFace recognition 🔓\nVoice assistants 🎤\nCalculator ➕\nNetflix recommendations 🍿\nAlarm Clock ⏰"
+  },
+  {
+    "objectID": "slides/slides-02-ai-ml-intro.html#which-of-these-do-you-think-use-ai-1",
+    "href": "slides/slides-02-ai-ml-intro.html#which-of-these-do-you-think-use-ai-1",
+    "title": "Introduction to AI",
+    "section": "Which of these do you think use AI?",
+    "text": "Which of these do you think use AI?\n\n✅ Google’s spam detector 📧\n✅ Autocomplete on your phone 📱\n✅ Face recognition 🔓\n✅ Voice assistants 🎤\n❌ Calculator ➕\n✅ Netflix recommendations 🍿\n❌ Alarm Clock ⏰\n\nWhat makes these different?"
+  },
+  {
+    "objectID": "slides/slides-02-ai-ml-intro.html#what-should-you-remember",
+    "href": "slides/slides-02-ai-ml-intro.html#what-should-you-remember",
+    "title": "Introduction to AI",
+    "section": "What should you remember?",
+    "text": "What should you remember?\n\nAI is good at finding patterns.\nAI is useful when there isn’t a perfect rule for solving a problem.\nAI can help people. But people are still responsible for important decisions."
+  }
+]

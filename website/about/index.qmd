@@ -1,0 +1,21 @@
+---
+title: "Your instructor"
+
+sidebar: false
+repo-actions: false
+page-navigation: false
+
+listing:
+  template: about.ejs
+  contents:
+    - name: Varada Kolhatkar
+      instructor: true
+      role: "Associate Professor of Teaching, Computer Science, Master of Data Science"
+      image: varada.png
+---
+
+::: column-body
+::: {#listing}
+
+:::
+:::

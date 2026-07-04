@@ -1,0 +1,18 @@
+---
+title: "Language Models"
+description: "Introduction to NLP and Language Models"
+description-short: "Introduction to NLP and Language Models"
+duration: 60 mins
+
+editor: { render-on-save: true }
+---
+
+## Slides
+
+{{< revealjs "slides/slides-03-language-models.html" height="600px" class="ratio ratio-16x9" >}}
+
+
+## Outline
+
+- Dealing with natural language
+- Language models 

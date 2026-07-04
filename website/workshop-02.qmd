@@ -1,0 +1,18 @@
+---
+title: "AI and ML Intro"
+description: Introduction to AI and Machine Learning  
+description-short: Introduction to AI and Machine Learning
+duration: 30 mins
+
+editor: { render-on-save: true }
+---
+
+## Slides
+
+{{< revealjs "slides/slides-02-ai-ml-intro.html" height="600px" class="ratio ratio-16x9" >}}
+
+## Outline
+
+- What is AI? 
+- What is ML? 
+- Machine learning terminology

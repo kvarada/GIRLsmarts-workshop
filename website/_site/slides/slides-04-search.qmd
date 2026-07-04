@@ -1,0 +1,222 @@
+---
+title: 'Keyword and Semantic Search'
+author: "Varada Kolhatkar"
+description: "Keyword and Semantic Search"
+format:
+    revealjs:
+        html-math-method: mathjax
+        slide-number: true
+        theme:
+          - slides.scss
+        resources:
+          - data/
+          - img/
+
+
+editor:
+  render-on-save: true
+---
+
+```{python}
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import os
+import sys
+plt.rcParams["font.size"] = 16
+DATA_DIR = 'data/' 
+```
+
+# Keyword and Semantic Search
+
+## Can computers search like humans? {background-color="#fafabc"}
+
+Imagine you're shopping online. 
+
+:::: {.columns}
+
+::: {.column width="50%"}
+You search for
+
+"headphones for studying"
+::: 
+::: {.column width="50%"}
+**Products**
+
+1. Gaming Headset 🎮
+2. Sony WH-1000XM6 Noise-Cancelling Headphones 🎧 
+3. Bluetooth Speaker 🔈
+4. Study Desk 
+::: 
+::::
+Which product should appear first?
+
+#
+
+How does a computer decide which result is the most relevant?
+
+## Method 1: Keyword Search
+
+The computer looks for the exact words you typed.
+
+
+:::: {.columns}
+::: {.column width="50%"}
+"<span class="highlight">Headphones</span> for studying"
+::: 
+::: {.column width="50%"}
+**Products**
+
+1. Gaming Headset 🎮
+2. Sony WH-1000XM6 Noise-Cancelling <span class="highlight">Headphones</span> 🎧 
+3. Bluetooth Speaker 🔈
+4. **Study** Desk
+::: 
+::::
+
+## Activity
+
+Suppose a search engine uses **keyword search**.
+
+You search for:
+
+> **Headphones for studying**
+
+Which of these products would be matched?
+
+- Bose QuietComfort Noise-Cancelling Headphones 🎧
+- Sony WH-1000XM6 Wireless Headphones 🎧
+- Study Desk 📚
+- Headphones Carrying Case 🎒
+- Homework Planner 📅
+
+
+# When keyword search struggles
+
+Suppose you search
+
+> sneakers
+
+but the product says
+
+> running shoes
+
+Or you search
+
+> couch
+
+but the product says
+
+> sofa
+
+They mean almost the same thing...
+
+...but they don't share any words.
+
+
+# Method 2: Semantic Search
+
+Instead of matching words, the computer tries to understand the meaning.
+
+> "sneakers" $\approx$ "running shoes"
+
+> "couch" $\approx$ "sofa"
+
+Now the computer can find things even when the wording is different.
+
+
+## Activity
+
+Would semantic search help?
+
+- "rainproof jogging equipment"
+- "chair for back pain"
+- "movie about dinosaurs"
+- "phone with a great camera"
+
+Discuss with your neighbour.
+
+## How can a computer understand meaning?
+
+Modern AI converts words into numbers called **embeddings**.
+
+Words with similar meanings end up close together.
+
+(cat) 🐱
+
+is close to
+
+(kitten)
+
+but far away from
+
+(car)
+
+The computer compares these numbers instead of comparing words.
+
+# Keyword vs Semantic Search
+
+| Keyword Search | Semantic Search |
+|----------------|-----------------|
+| Matches words | Matches meaning |
+| Great for names | Great for natural language |
+| Finds exact products | Finds related ideas |
+| Misses synonyms | Understands synonyms |
+
+
+## Which would you use?
+
+Search:
+
+> "WH-1000XM5"
+
+Best choice?
+
+✅ Keyword search
+
+
+Search:
+
+> "good headphones for airplanes"
+
+Best choice?
+
+✅ Semantic search
+
+
+## The best systems use both
+
+Modern search engines and AI assistants combine
+
+- Keyword search
+- Semantic search
+
+This is called **Hybrid Search**.
+
+It gives the best of both worlds.
+
+
+## Where is this used?
+
+- Google Search
+- Amazon
+- Spotify
+- Netflix
+- YouTube
+- ChatGPT
+- AI assistants
+
+Almost every modern search system combines keyword matching with AI.
+
+
+## Takeaways
+
+✔ Keyword search looks for matching words.
+
+✔ Semantic search looks for matching meaning.
+
+✔ Modern AI systems combine both approaches.
+
+The goal isn't just to find the same words.
+
+It's to find the most useful information.

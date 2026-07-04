@@ -1,0 +1,13 @@
+# History files
+.Rhistory
+.Rapp.history
+.DS_Store
+/.quarto/
+.ipynb_checkpoints
+.git
+.quarto
+_build*
+
+/.quarto/
+
+**/*.quarto_ipynb
